@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vivi Shoes — calçados femininos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;700&family=Karla:wght@400;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<header class="topo">
+  <a class="marca" href="#inicio">Vivi<em>Shoes</em></a>
+  <nav>
+    <a href="#vitrine">Modelos</a>
+    <a href="#pedidos">Meus pedidos</a>
+  </nav>
+  <button class="sacola" id="btnSacola">Sacola <span id="contador">0</span></button>
+</header>
+
+<main id="inicio">
+
+  <!-- ---------------- abertura ---------------- -->
+  <section class="capa">
+    <h1>Sapatos em couro<br>e os tênis do momento.</h1>
+    <p>Numeração 33 ao 41, com envio para todo o Brasil.</p>
+
+    <div class="filtro">
+      <span class="filtro__rot">Seu número:</span>
+      <div class="filtro__botoes" id="filtro">
+        <button class="num num--ativo" data-num="todos">todos</button>
+        <button class="num" data-num="33">33</button>
+        <button class="num" data-num="34">34</button>
+        <button class="num" data-num="35">35</button>
+        <button class="num" data-num="36">36</button>
+        <button class="num" data-num="37">37</button>
+        <button class="num" data-num="38">38</button>
+        <button class="num" data-num="39">39</button>
+        <button class="num" data-num="40">40</button>
+        <button class="num" data-num="41">41</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- vitrine ---------------- -->
+  <section class="secao" id="vitrine">
+    <div class="secao__topo">
+      <h2>Modelos</h2>
+      <span class="conta" id="conta"></span>
+    </div>
+    <div class="vitrine" id="grade"></div>
+  </section>
+
+  <!-- ---------------- meus pedidos ---------------- -->
+  <section class="secao secao--escura" id="pedidos">
+    <h2>Meus pedidos</h2>
+    <p class="secao__texto">Consulte pelo CPF usado na compra.</p>
+
+    <form class="consulta" id="formConsulta">
+      <input name="cpf" placeholder="000.000.000-00" required>
+      <button class="btn btn--claro" type="submit">Consultar</button>
+    </form>
+
+    <div id="listaPedidos"></div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <p><strong>Vivi Shoes</strong> — Rua Padre Eustáquio, 812, Belo Horizonte/MG</p>
+  <p>(31) 3333-0000 · oi@vivishoes.com.br</p>
+  <p class="rodape__fim">
+    Projeto acadêmico · HTML, CSS, JavaScript, C# e MySQL · endereço via API ViaCEP
+  </p>
+</footer>
+
+<!-- janela usada pela ficha do produto, pela sacola e pelo checkout -->
+<div class="cortina" id="cortina" hidden></div>
+<div class="janela" id="janela" hidden role="dialog" aria-modal="true">
+  <div class="janela__topo">
+    <h3 id="janelaTitulo"></h3>
+    <button class="janela__x" id="btnFechar" aria-label="Fechar">✕</button>
+  </div>
+  <div id="janelaCorpo"></div>
+</div>
+
+<div class="avisos" id="avisos"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
